@@ -8,5 +8,9 @@ public class IncrementAndDecrementOperator {
         a--;//or --a decrement by one first a is decremented then a is used
         //a-- first a is used then a is decremented
         System.out.println(a);
+        System.out.println(++a+9);//first value of a is incremented then added to 9
+        char c='c';
+        System.out.println(++c);
+
     }
 }
