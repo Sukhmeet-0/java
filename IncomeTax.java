@@ -1,5 +1,5 @@
 import java.util.*;
-class Ex19 {
+class IncomeTax {
     public static void main(String[] args) {
     Scanner s=new Scanner(System.in);
     float income,tax=0;

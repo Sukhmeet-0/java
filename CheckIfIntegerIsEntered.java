@@ -1,5 +1,5 @@
 import java.util.*;
-public class Ex5 {
+public class CheckIfIntegerIsEntered {
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
         System.out.print("Enter an interger number : ");

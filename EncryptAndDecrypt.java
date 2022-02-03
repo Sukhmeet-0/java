@@ -1,4 +1,4 @@
-public class Ex7 {
+public class EncryptAndDecrypt {
     public static void main(String[] args) {
         //encrypt grade
         char grade ='A';

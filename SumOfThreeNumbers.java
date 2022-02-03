@@ -1,5 +1,5 @@
 import java.util.*;
-public class Ex1 {
+public class SumOfThreeNumbers {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int a,b,c,sum;

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Ex8 {
+public class CheckGreaterNumber {
     public static void main(String[] args) {
         System.out.println("Check if entered number is greater than the computer's number True for greater and False for lesser ");
         int a,b=9;

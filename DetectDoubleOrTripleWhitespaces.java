@@ -1,5 +1,5 @@
 import java.util.*;
-public class Ex11 {
+public class DetectDoubleOrTripleWhitespaces {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter a String containing double or tripple whitepaces : ");

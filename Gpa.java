@@ -1,5 +1,5 @@
 import java.util.*;
-public class Ex2 {
+public class Gpa {
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
         float a,b,c,gpa;
