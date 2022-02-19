@@ -1,7 +1,4 @@
 public class Recursion {
-
-
-    
     // static int factorial(int a){
     //     if(a==0||a==1){
     //         return 1;
@@ -10,13 +7,6 @@ public class Recursion {
     //         return a*factorial(a-1);
     //     }
     // }
-
-
-    //or   
-
-
-
-
     static int factorial(int a){
         if(a==0||a==1){
             return 1;

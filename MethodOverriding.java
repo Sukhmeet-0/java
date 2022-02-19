@@ -18,7 +18,7 @@ public class MethodOverriding {
 
 
     //method overriding
-    //same name methods with different arguements and same return type
+    //same name methods with different arguements
     static void add(int a,int b){
         int s=a+b;
         System.out.println(s);
