@@ -6,7 +6,7 @@ class A {
 class B extends A{
     @Override // this annotation in used to tell if overriding is happening or not for clear understanding it shows error if overriding is not happening
     public void  meth1(){
-        System.out.println("I am method 1 of class B");
+        System.out.println("I am method 1 of class B");//over riding the method of parent class
     }
     public void meth2(){
         System.out.println("I am method 2 of class B");
