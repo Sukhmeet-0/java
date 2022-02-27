@@ -1,4 +1,4 @@
-public class MethodOverriding {
+public class MethodOverloading {
     // static void change(int x){// the arguement we give in a method is a copy and we cannot change the original value of the arguement only the copy of it
     //     x=98;
     // }

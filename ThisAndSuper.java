@@ -13,7 +13,7 @@
 // }
 // class DoClass extends EkClass{
 //     public DoClass(int c){
-//         super(c);
+//         super(c);//super keyword is used to invoke the constructor functions of the parent class
 //         System.out.println("Mai ek constructor hu "+a);
 //     }
 // }
