@@ -1,6 +1,6 @@
 class A {
     public void  meth1(){
-        System.out.println("I am method 1 of class A");
+        System.out.println("I am method 1 of class A");// it should be accessible to derived class and should have same return type
     }
 }
 class B extends A{
