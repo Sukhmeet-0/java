@@ -1,3 +1,4 @@
+
 interface Bicycle{
     int a=45;
     void applybreak(int decrement);
