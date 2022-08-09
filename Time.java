@@ -1,32 +1,37 @@
-
 import java.util.Scanner;
 
-public class Time implements Comparable<Time>,Cloneable{
+class Time implements Comparable<Time>,Cloneable{
     private int minute,second,hour;
-    private long totalSeconds,elapsedTime1,elapsedTime2;
+    private long totalSeconds,elapsedTime1;
     private static int h,m,s;
     Time(){
         totalSeconds=System.currentTimeMillis()/1000;
     }
     Time(int hour,int minute,int second ){
-        System.out.println(hour+" hours "+minute+" minuted "+second+" seconds");
-        elapsedTime1=(((hour*60*60)+(minute*60)+(second))*1000);
+        elapsedTime1=(((hour*60*60)+(minute*60)+(second)));
+        long totalHours=elapsedTime1/60/60;
+        int mhour=(int)((int)totalHours%24);
+        long totalMinutes=(elapsedTime1/60)-(hour*60);
+        int mminute=(int)((int)totalMinutes%60);
+        long totalseconds=elapsedTime1-((hour*60)*60)-(minute*60);
+        int msecond=(int) ((int)totalseconds%60);
+        System.out.println(mhour+" hours "+mminute+" minutes "+msecond+" seconds");
         System.out.println("Elapsed seconds in time1: "+elapsedTime1);
     }
-    Time(long elapsedTime){
-        elapsedTime2=elapsedTime;
-        long totalseconds=elapsedTime/1000L;
-        second=(int) ((int)totalseconds%60L);
-        long totalMinutes=totalseconds/60;
-        minute=(int)((int)totalMinutes%60L);
-        long totalHours=totalMinutes/60;
+    Time(long  elapsedTime){
+        elapsedTime1=elapsedTime;
+        long totalHours=elapsedTime/60/60;
         hour=(int)((int)totalHours%24);
+        long totalMinutes=(elapsedTime/60)-(hour*60);
+        minute=(int)((int)totalMinutes%60);
+        long totalseconds=elapsedTime-((hour*60)*60)-(minute*60);
+        second=(int) ((int)totalseconds%60);
 
         System.out.println(hour+" hours "+minute+" minutes "+second+" seconds");
-        System.out.println("Elapsed seconds in time1: "+elapsedTime2);
+        System.out.println("Elapsed seconds in time2: "+elapsedTime1);
     }
     public int getHour(){
-        return (int)((((System.currentTimeMillis()/1000)/60)/60)%24);
+        return (int)((((System.currentTimeMillis()/1000)/60)/60)%60);
     }
     public int getMinute(){
         return (int)(((System.currentTimeMillis()/1000)/60)%60);
@@ -42,30 +47,38 @@ public class Time implements Comparable<Time>,Cloneable{
         return hour+" hours "+minute+" minutes "+second+" seconds and "+getHour()+" hours "+getMinute()+" minutes "+getSecond()+" seconds ";
     }
     public int compareTo(Time t){
-        return (int)elapsedTime1-(int)t.elapsedTime2;
+        return (int)elapsedTime1-(int)t.elapsedTime1;
     }
     public static void main(String[]args) throws CloneNotSupportedException{
-        Time time=new Time();
-        System.out.println(time.getSeconds());
-        System.out.println();
         Scanner sc=new Scanner(System.in);
+
+
+        Time time=new Time();
         System.out.print("Enter time (Hours Minutes Seconds): ");
         h=sc.nextInt();
         m=sc.nextInt();
         s=sc.nextInt();
         Time time1=new Time(h,m,s);
         System.out.println();
-        Time time2=new Time(18061000);
-        System.out.println();
-        System.out.println(time1.compareTo(time2));
 
-        Time time4=(Time) time.clone();
-        System.out.println(time4.totalSeconds);
+
+        System.out.print("Enter time(In Seconds)  : ");
+        long time2Inseconds=sc.nextLong();
+        Time time2=new Time(time2Inseconds);
+        System.out.println();
+
+        System.out.print("time1.compareTo(time2)? ");
+        System.out.println(time1.compareTo(time2));
+        
+        Time time3=(Time) time1.clone();
+        
+        System.out.println("time3 is created as clone of time1");
+        System.out.print("time1.compareTo(time3)?  ");
+        System.out.println(time1.compareTo(time3));
+
+
         sc.close();
 
     }
 
 }
-
-
-
